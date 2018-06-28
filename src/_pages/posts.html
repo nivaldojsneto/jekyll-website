@@ -1,0 +1,64 @@
+--- 
+  page_title: Posts 
+  description: Alguma descrição sobre a página, caso não tenha apague a linha 
+  layout: page 
+  class: noticias
+  sitemap: true 
+---
+
+<section class="page">
+  <div class="container">
+    <header>
+      <h2 class="page-title">Posts</h2>
+    </header>
+
+    <div class="content">  
+      {% if site.posts.size > 0 %}
+        <div class="posts">
+          <div class="row">
+            {% for post in site.posts %}
+              <div class="col-lg-12 margin-bottom-50">
+                <div class="post">
+                  <header>
+                    <h3 class="post-title">{{ post.title }}</h3>
+                    <span>
+                      {% assign day = post.date | date: "%-d" %}
+                      {% assign month = post.date | date: "%-m" %}
+                      {% assign year = post.date | date: "%-Y" %}
+                      <span class="page-subtitle">
+                        {{ day }}
+                        de {% case month %}
+                          {% when '1' %}Janeiro
+                          {% when '2' %}Fevereiro
+                          {% when '3' %}Março
+                          {% when '4' %}Abril
+                          {% when '5' %}Maio
+                          {% when '6' %}Junho
+                          {% when '7' %}Julho
+                          {% when '8' %}Agosto
+                          {% when '9' %}Setembro
+                          {% when '10' %}Outubro
+                          {% when '11' %}Novembro
+                          {% when '12' %}Dezembro
+                        {% endcase %}
+                        de {{ year }}
+                      </span>
+                    </span>
+                  </header>
+
+                  <article>
+                    {{ post.excerpt }}
+                  </article>
+
+                  <a href="{{ post.url }}" class="btn btn-primary margin-top-20">Leia mais</a>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% else %}
+        <p>Nenhuma postagem encontrada!</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

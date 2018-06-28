@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+{% include head.html %}
+
+<body class="layout-page {{ page.class }}">
+  {% include header.html %}
+
+  <section class="page">
+    <div class="container">
+      <header>
+        <h2 class="page-title">{{ page.title }}</h2>
+
+        {% assign day = page.date | date: "%-d" %}
+        {% assign month = page.date | date: "%-m" %}
+        {% assign year = page.date | date: "%-Y" %}
+        <span class="page-subtitle">
+          {{ day }}
+          de {% case month %}
+            {% when '1' %}Janeiro
+            {% when '2' %}Fevereiro
+            {% when '3' %}Março
+            {% when '4' %}Abril
+            {% when '5' %}Maio
+            {% when '6' %}Junho
+            {% when '7' %}Julho
+            {% when '8' %}Agosto
+            {% when '9' %}Setembro
+            {% when '10' %}Outubro
+            {% when '11' %}Novembro
+            {% when '12' %}Dezembro
+          {% endcase %}
+          de {{ year }}
+        </span>
+      </header>
+
+      <div class="content">
+        {{ content }}
+      </div>
+    </div>
+  </section>
+
+  {% include footer.html %}
+  <script type="text/javascript" src="{% asset_path js/main.js %}"></script>
+</body>
+
+</html>

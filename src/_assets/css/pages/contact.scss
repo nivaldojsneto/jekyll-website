@@ -1,0 +1,125 @@
+#contact
+ {
+  background: linear-gradient(to bottom, #75cbe7 0%, #138fc2 100%);
+}
+
+#contact {
+
+  .page-title{
+    line-height: 48px;
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .page-subtitle{
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+
+  #contact-form {
+    .form-group {
+      label {
+        &.error {
+          color: #e74c3c;
+          font-size: 12px;
+          font-style: italic;
+          margin-top: 5px;
+        }
+      }
+
+      .form-control {
+        font-size: 14px;
+        font-weight: 300;
+
+        &.error {
+          border-color: #e74c3c;
+        }
+      }
+
+      textarea {
+        &.form-control {
+          resize: none;
+          max-height: 200px;
+        }
+      }
+
+      input { 
+        &.form-control {
+          height: 50px;
+        }
+      }
+    }
+
+    .btn {
+      &.btn-primary {
+        display: inline-block;
+    padding: 8px 30px;
+    border-radius: 50px;
+    color: #ffffff;
+    background-color: #011E3C;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border: none;
+    -webkit-box-shadow: 2px 5px 20px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 5px 20px -5px rgba(0, 0, 0, 0.1);
+      }
+    }
+    
+    .btn-primary:hover {
+    background-color: #ffffff !important;
+    color: #138fc2 !important;
+  }  
+  
+  }
+
+
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+
+      .icon {
+        color: #fff;
+        font-size: 30px;
+        margin-right: 20px;
+      }
+
+      .detail {
+        display: flex;
+        flex: 1;
+        font-size: 20px;
+        font-weight: 300;
+        color: #fff;
+
+        a {
+          color: #fff;
+        }
+
+        address {
+          margin: 0;
+        }
+      }
+    }
+  }
+  
+  .map {
+    border: 0;
+    margin: 60px 0 0;
+  }
+}

@@ -1,0 +1,100 @@
+# Site Base Usando Jekyll Atualizado para o Jekyll 3.8.3
+#
+# Estrutura de dados atualizadas para a versão mais recente do Jekyll, a 3.8.3
+# Por: Nivaldo Neto | github.com/nivaldojsneto
+
+#Basic Configurations
+name: PRTE - Tecnologia & Soluções
+title: Somos Apaixonados por Educação a Distância
+description: DESCRIÇÃO DA EMPRESA AQUI #(MAX 200 CARACTERES)
+keywords: prte, egregora
+baseurl: ""
+url: "/"
+source: src
+destination: public
+timezone: America/Sao_Paulo
+locale: pt_BR
+encoding: utf-8
+
+# Contacts Info
+address: Rua Deputado Walter Roussenq, 310, Canta Galo, Rio do Sul - Santa Catarina
+phone: (47) 9999-9999 e (48) 8888-8888
+email: gabrielbuzzi@prte.com.br
+
+# Social
+facebook: https://www.facebook.com/somosprte/
+instagram: https://www.instagram.com/somosprte/
+
+# Google Analytics
+google_analytics_id:
+
+# Assets Compression
+assets:
+    cache: _assets/_cache
+    prefix: "/assets"
+    version: true
+    compress:
+      css: true
+
+    autoprefixer:
+        browsers:
+          - "last 2 versions"
+          - "IE > 9"
+
+    assets:
+        - "*.jpg"
+        - "*.png"
+        - "*.svg"
+        - "*.ttf"
+        - "*.eot"
+        - "*.otf"
+        - "*.woff"
+        - "*.woff2"
+        - "*.pdf"
+        - "*.zip"
+
+    sources:
+        - _assets
+        - _assets/css
+        - _assets/img
+        - _assets/js
+
+
+#menu
+#menuitems:
+#  - url: /#home
+#    title: Home
+#  - url: /#about
+#    title: Quem Somos?
+#  - url: /#services
+#   title: O Que Fazemos?
+# - url: /#portfolio
+#   title: Portfolio
+# - url: /posts
+#    title: Blog 
+#  - url: /#contact
+#   title: Fale Conosco
+
+
+# Server Config options
+livereload: true  
+reload_port: 5678 
+
+collections:
+    pages:
+        output: true
+        permalink: /:name
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-assets
+  - jekyll-redirect-from
+
+exclude:
+   - Gemfile
+   - Gemfile.lock
+   - node_modules

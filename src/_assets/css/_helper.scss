@@ -1,0 +1,20 @@
+@mixin margin-x {
+  @for $i from 0 through 100 {
+      @if $i % 5 == 0 {
+          .margin-top-#{$i} {
+              margin-top: #{$i}px !important;
+          }
+          .margin-right-#{$i} {
+              margin-right: #{$i}px !important;
+          }
+          .margin-bottom-#{$i} {
+              margin-bottom: #{$i}px !important;
+          }
+          .margin-left-#{$i} {
+              margin-left: #{$i}px !important;
+          }
+      }
+  }
+}
+
+@include margin-x;

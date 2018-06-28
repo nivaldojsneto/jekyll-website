@@ -1,0 +1,28 @@
+@import 
+  'font-awesome/fontawesome', 
+  'font-awesome/fa-solid',
+  'font-awesome/fa-regular',
+  'font-awesome/fa-brands';
+
+@import 
+  'libs/normalize',
+  'libs/bootstrap.min',
+  'libs/owl.carousel.min',
+  'variables',
+  'defaults';
+
+@import 
+  'blocks/banner',
+  'blocks/page';
+
+@import 
+ 'pages/services',
+ 'pages/contact',
+ 'pages/about',
+ 'pages/portfolio',
+ 'pages/testimonial';
+
+@import 
+  'helper',
+  'header',
+  'footer';
