@@ -1,2 +1,2 @@
 # jekyll-website
-Site em Jekyll usando o egregora-base
+Site em desenvolvido utilizando o Jekyll usando o egregora-base como base
